@@ -18,7 +18,7 @@
 
 <main>
     <h1>Cerca per artista</h1>
-    <form on:keyup={handleSubmit} on:click={handleSubmit}>
+    <form on:keyup={handleSubmit} on:submit={handleSubmit}>
         <label for="textInput">Inserisci il nome:</label>
         <input type="text" id="textInput" bind:value={inputValue}>
     </form>

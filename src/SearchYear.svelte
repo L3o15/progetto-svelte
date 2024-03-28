@@ -18,7 +18,7 @@
 
 <main>
     <h1>Cerca per anno</h1>
-    <form on:keyup={handleSubmit} on:click={handleSubmit}>
+    <form on:keyup={handleSubmit} on:submit={handleSubmit}>
         <label for="textInput">Inserisci l'anno:</label>
         <input type="text" id="textInput" bind:value={inputValue}>
     </form>

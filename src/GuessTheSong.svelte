@@ -7,6 +7,7 @@
 
   let canzone_da_indovinare = null;
   let alternatives = [];
+
   let previousAlternatives = [];
   let previousSong = null;
   const disp = createEventDispatcher();
@@ -38,34 +39,19 @@
     // Seleziona la prima canzone filtrata come canzone da indovinare e le successive 3 come alternative
     canzone_da_indovinare = filteredSongs[0];
 
-    // Prendi i titoli unici delle canzoni
-    const uniqueTitles = [...new Set(filteredSongs.map(song => song['Track Name']))];
+    filteredSongs = filteredSongs.filter(track => track['Track Name'] !== canzone_da_indovinare['Track Name']);
 
-    // Escludi la canzone da indovinare dai titoli unici
-    const otherTitles = uniqueTitles.filter(title => title !== canzone_da_indovinare['Track Name']);
-
-    // Seleziona le alternative
-    alternatives = [];
-    for (let i = 0; i < 3 && i < otherTitles.length; i++) {
-      // Trova una canzone casuale con il titolo corrente
-      const songsWithSameTitle = filteredSongs.filter(song => song['Track Name'] === otherTitles[i]);
-      const randomIndex = Math.floor(Math.random() * songsWithSameTitle.length);
-      alternatives.push(songsWithSameTitle[randomIndex]);
-    }
-
-    if (alternatives.length < 3) {
-      alert("Non ci sono abbastanza canzoni.")
+    if (filteredSongs.length < 3){
       alternatives = previousAlternatives;
       canzone_da_indovinare = previousSong;
       return
     }
 
-    
-    // Aggiungi la canzone da indovinare alla fine delle alternative
+    alternatives = filteredSongs.slice(0, 3);
     alternatives.push(canzone_da_indovinare);
+
     previousAlternatives = alternatives;
     previousSong = canzone_da_indovinare;
-    // Mescola le alternative
     for (let i = alternatives.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [alternatives[i], alternatives[j]] = [alternatives[j], alternatives[i]];
