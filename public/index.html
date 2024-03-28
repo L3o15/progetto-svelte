@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+
+	<script defer src='/build/bundle.js'></script>
+</head>
+
+<body>
+</body>
+<style>
+	html, body {
+		width: 100%;
+		height:100%;
+		position: static;
+	}
+	  
+	body {
+		background: linear-gradient(-45deg, rgb(12, 20, 45), #0b132b);
+		background-size: 400% 400%;
+		background-attachment: fixed;
+		animation: gradient 5s ease infinite;
+	}
+	  
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+</style>
+</html>
