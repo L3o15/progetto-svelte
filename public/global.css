@@ -45,12 +45,14 @@
 		color: #ccc;
 	}
 
+
 	.add_track {
 		color: #6fffe9;
-		background-color: rgb(255, 255, 255, 0);
+		background-color: rgb(255,255,255, 0);
 		border: none;
 		outline: none;
 	}
+
 
 	button:disabled {
 		color: #999;
@@ -157,38 +159,6 @@
 
 	.popularity {
 		color: #6fffe9;
-	}
-
-	.track-card {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		margin: 10px;
-		padding: 10px;
-		padding-left: 20px;
-		padding-right: 20px;
-		border: 1px solid #000000;
-		border-radius: 5px;
-		background-color: #3a506b;
-		width: 70%;
-		border: none;
-	}
-
-	.track-extras {
-		margin-left: auto;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end, center;
-	}
-
-	.add_track {
-		padding: 0;
-		background: rgba(red, green, blue, 0.0); /* Nota: "red", "green" e "blue" dovrebbero essere valori numerici */
-		position: absolute;
-		top: 0; /* Posiziona l'icona all'estremità superiore */
-		left: 0; /* Posiziona l'icona all'estremità sinistra */
-		height: 30px;
-		width: 30px;
 	}
 	
 
@@ -316,7 +286,7 @@
 
 	.add_track {
 		color: #6fffe9;
-		background-color: rgb(255, 255, 255, 0);
+		background-color: rgb(255,255,255, 0);
 		border: none;
 		outline: none;
 	}
@@ -427,37 +397,6 @@
 
 	.popularity {
 		color: #6fffe9;
-	}
-
-	.track-card {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		margin: 10px;
-		padding: 10px;
-		padding-left: 20px;
-		padding-right: 20px;
-		border: 1px solid #000000;
-		border-radius: 5px;
-		background-color: #3a506b;
-		width: 70%;
-		border: none;
-	}
-
-	.track-extras {
-		margin-left: auto;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end, center;
-	}
-
-	.add_track {
-		padding: 0;
-		background: rgba(red, green, blue, 0.0);
-		position: absolute;
-		position: 0, 0;
-		height: 30px;
-		width: 30px;
 	}
 
 	.options {
