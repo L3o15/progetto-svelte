@@ -102,5 +102,11 @@
     audio {
         margin: 20px;
     }
+
+    @media only screen and (max-width: 600px){
+      button {
+        font-size: 10px; 
+      }
+    }
     
 </style>

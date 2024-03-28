@@ -67,9 +67,6 @@
   });
 </script>
 
-<!--h1>Dettaglio del post {id.id}</h1>
-{JSON.stringify(canzone)}
-<-->
 <main>
   <div class = "infos">
     <img class = "imgStats" src={canzone['Album Image URL']} alt="">
@@ -92,7 +89,10 @@
         <h3>Released in {canzone['Album Name']} on {canzone['Album Release Date']}</h3>
       </div>
       <div class = "part">
-        <h4>Genres: {canzone['Artist Genres']}</h4>
+        {#if canzone['Artist Genres']}
+          <h4>Genres: {canzone['Artist Genres']}</h4>
+        {/if}
+        
       </div>
     </div>
     
@@ -120,6 +120,26 @@
     height: 30px;
     width: 30px;
   }
+
+  @media only screen and (max-width: 600px){
+    h1 {
+      font-size: 24px; /* Esempio di dimensione del testo per h1 */
+    }
+
+    h2 {
+      font-size: 18px; /* Esempio di dimensione del testo per h2 */
+    }
+
+    h3 {
+      font-size: 14px; /* Esempio di dimensione del testo per h3 */
+    }
+
+    h4 {
+      font-size: 12px; /* Esempio di dimensione del testo per h4 */
+    }
+  }
+
+  
 
 
 </style>

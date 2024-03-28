@@ -96,28 +96,74 @@
 
 
 <style>
-    img {
-        position: 0,0;
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 5%;
-        margin-right: 20px;
+    @media only screen and (max-width: 600px) {
+        img {
+            position: 0,0;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5%;
+            margin-right: 5px;
+        }
+
+        .track-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            background-color: #3a506b;
+            width: 85%;
+            border: none;
+            position: relative;
+        }
+
+        .track-info h2 {
+            font-size: 16px; /* Riduci la dimensione del testo per il titolo */
+        }
+
+        .track-info h4 {
+            font-size: 12px; /* Riduci la dimensione del testo per gli artisti */
+        }
+
+        .track-extras h5 {
+            font-size: 12px; /* Riduci la dimensione del testo per la data di rilascio */
+        }
     }
-    .track-card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 10px;
-        padding: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        border: 1px solid #000000;
-        border-radius: 5px;
-        background-color: #3a506b;
-        width: 70%;
-        border: none;
+
+    @media only screen and (min-width: 600px) {
+        img {
+            position: 0,0;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5%;
+            margin-right: 20px;
+        }
+
+        .track-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            background-color: #3a506b;
+            width: 70%;
+            border: none;
+        }
     }
+    
+    
     .track-extras {
         margin-left: auto;
         display: flex;

@@ -115,6 +115,13 @@
         z-index: 200000000; 
     } 
     
+    @media only screen and (max-width: 600px){
+        nav {
+            width: 100%;
+            height: 50px;
+            margin-top: 50px;
+        }
+    }
 
     svg {
         color: #5bc0be;
