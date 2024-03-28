@@ -102,12 +102,5 @@
     audio {
         margin: 20px;
     }
-    .alternative {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    button {
-        margin: 10px;
-    }
+    
 </style>

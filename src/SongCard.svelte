@@ -112,34 +112,4 @@
         border-radius: 5%;
         margin-right: 20px;
     }
-
-    .track-card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 10px;
-        padding: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        border: 1px solid #000000;
-        border-radius: 5px;
-        background-color: #3a506b;
-        width: 70%;
-        border: none;
-    }
-    .track-extras {
-        margin-left: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end, center;
-    }
-
-    .add_track{
-        padding: 0;
-        background: rgba(red, green, blue , 0.0);
-        position: absolute;
-        position: 0, 0;
-        height: 30px;
-        width: 30px;
-    }
 </style>

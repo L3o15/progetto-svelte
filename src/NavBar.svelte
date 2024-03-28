@@ -114,26 +114,7 @@
         padding: 10px;
         z-index: 200000000; 
     } 
-    .container {
-        /* margin-top: 35px; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }  
-    .section:hover {
-        box-shadow:
-        0 0 6px 3px #dafff9,
-        0 0 10px 6px #5bc0be,
-        0 0 14px 9px #6fffe9;
-        border-radius: 10px;
-        transition: padding 1s, box-shadow 1s;
-    } 
-
-    .section {
-        border-radius: 10px;
-        transition: padding 1s, box-shadow 1s;
-    }
+    
 
     svg {
         color: #5bc0be;

@@ -37,9 +37,4 @@
 </main>
 
 <style>
-    .songs_container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 </style>
