@@ -1,6 +1,7 @@
 <script>
   import { tracks, myTracks } from './store.js';
   import { onMount, afterUpdate, createEventDispatcher } from 'svelte';
+  import { fade } from 'svelte/transition';
   let mySongs = $myTracks;
   export let year;
   export let onlyFavourite;
@@ -79,15 +80,13 @@
     <h1>Guess the song</h1>
     {#if canzone_da_indovinare}
       <h2>Which song is this?</h2>
-      <!--p>{canzone_da_indovinare['Track Name']} - {canzone_da_indovinare['Artist Name(s)']}</p>
-      <p>{canzone_da_indovinare['Track Preview URL']}</p-->
       <audio controls id="audioPlayer">
         <source src={canzone_da_indovinare['Track Preview URL']} type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
       <div class="alternative">
           {#each alternatives as track}
-              <button on:click={() => {
+              <button transition:fade on:click={() => {
                   if (track['Track URI'] === canzone_da_indovinare['Track URI']) {
                       alert('Correct!');
                       disp('win', "win");
