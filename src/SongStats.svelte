@@ -1,16 +1,23 @@
 <script>
   import { tracks } from './store.js';
-  import { onMount, afterUpdate } from 'svelte';
+  import { onMount } from 'svelte';
   import { Chart } from 'chart.js/auto';
   import 'chartjs-adapter-date-fns';
-
   export let id;
 
   let canzone;
+  let scaleGraph = 1.0; // Valore iniziale di scala
 
   // Trova la canzone corrispondente all'id
   const canzoni = $tracks;
   canzone = canzoni.find(track => track['Track URI'] === id.id);
+
+
+  // Modifica il valore di scala in base al tempo della canzone
+  setInterval(() => {
+    scaleGraph = scaleGraph === 1.0 ? 0.99 : 1.0; // Alterna tra due valori di scala
+  }, (60000 /canzone['Tempo']));
+
   onMount(() => {
     let loudness = ((-1) * (canzone['Loudness'] - 2769)) / 293.68;
     let danceability = (canzone['Danceability'] / 9.88) * 100;
@@ -79,7 +86,7 @@
     </h2>
     <div class = "divisor">
       <div class = "part">
-        <h1 class = "popularity">{canzone['Track Name']}    </h1>
+        <h1 class = "popularity">{canzone['Track Name']} </h1>
       </div>
       
       <div class = "part">
@@ -98,10 +105,10 @@
     
     
   </div>
-
-  <div class="grafico">
-    <canvas id="myChart" width="100" height="100"></canvas>
+  <div class="grafico" style="transform: scale({scaleGraph}); opacity: 1;">
+    <canvas id="myChart"></canvas>
   </div>
+  
 </main>
 
 
