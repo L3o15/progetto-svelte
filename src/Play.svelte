@@ -61,7 +61,13 @@
 <main>
   <div class="options">
     <h3 class="winsStats">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke-width="1.5" 
+      stroke="currentColor" 
+      class="w-6 h-6">
         <path 
         transition:draw={{ duration: 5000, delay: 500, easing: quintOut }}
         stroke-linecap="round" 

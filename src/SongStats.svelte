@@ -102,6 +102,10 @@
         
       </div>
     </div>
+    <audio controls id="audioPlayer">
+      <source src={canzone['Track Preview URL']} type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     
     
   </div>
