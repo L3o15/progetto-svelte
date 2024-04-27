@@ -86,7 +86,7 @@
       </audio>
       <div class="alternative">
           {#each alternatives as track}
-              <button transition:fade on:click={() => {
+              <button on:click={() => {
                   if (track['Track URI'] === canzone_da_indovinare['Track URI']) {
                       alert('Correct!');
                       disp('win', "win");
